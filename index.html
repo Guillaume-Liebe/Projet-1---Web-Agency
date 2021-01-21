@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 		<link rel="stylesheet" href="style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<title>Web Agency</title>
 	</head>
 
@@ -14,27 +15,30 @@
 
 <!-- LOGO + MENU -->
 
-		<header>
-			
+		<header>			
 			<div class="container_header">
-
 				<div><img src="images/logo.PNG" alt="WebAgency"/></div>
-
-				<nav>
-					
+				<nav>				
 					<ul id="nav">
-						<li><a href="#"><div class="ligne"></div>Accueil</a></li>
-						<li><a href="#"><div class="ligne"></div>Services</a></li>
-						<li><a href="#"><div class="ligne"></div>Portfolio</a></li>
-						<li><a href="#"><div class="ligne"></div>Contact</a></li>
-
+						<li><a href="https://guillaume-liebe.fr/p1/"><div class="ligne"></div>Accueil</a></li>
+						<li><a href="#page-1" class="js-scrollTo"><div class="ligne"></div>Services</a></li>
+						<li><a href="#page-2" class="js-scrollTo"><div class="ligne"></div>Portfolio</a></li>
+						<li><a href="#page-3" class="js-scrollTo"><div class="ligne"></div>Contact</a></li>
 					</ul>
-
 				</nav>
-
 			</div>
-
 		</header>	
+
+        <script>
+            $(document).ready(function() {
+                $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+                    var page = $(this).attr('href'); // Page cible
+                    var speed = 750; // Durée de l'animation (en ms)
+                    $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                    return false;
+                });
+            });
+        </script>
 
 <!-- FIN DE LOGO + MENU -->
 
@@ -42,31 +46,22 @@
 <!-- SLIDER -->
 
 	    <section id="banniere_description">
-
-			<div id="image_principale">
-			
+			<div id="image_principale">		
 				<div class="caption_1">
-					<h1><span class="color_2">WEBAGENCY :  </span>
-						L'AGENCE DE TOUS<br/>
-						VOS PROJETS !</h1>
+					<h1><span class="color_2">WEBAGENCY :<br/></span>
+						L'AGENCE DE TOUS VOS PROJETS !</h1>
 					
 					<div class="caption_2">
-						<p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
-						
-						<div class="bouton_bleu">Plus d'infos</div>
-
+						<p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>						
+						<button href="#page-3" class="js-scrollTo" class="bouton_bleu">Plus d'infos</button>
 					</div>
-
 				</div>
 					
 				<a href="#" class="bouton_1"><i class="fas fa-angle-left"></i></a> 
-				<a href="#" class="bouton_2"><i class="fas fa-angle-right"></i></a>
-		
-					<div class="ligne_2"></div>
-					<div class="ligne_3"></div>
-					
-			</div>
-			
+				<a href="#" class="bouton_2"><i class="fas fa-angle-right"></i></a>		
+				<div class="ligne_2"></div>
+				<div class="ligne_3"></div>					
+			</div>			
 		</section>
  
  <!-- FIN SLIDER -->
@@ -75,70 +70,52 @@
  <!-- SERVICES -->
 
 		<section>
-
+			<div id="page-1"></div>
 	        <div class="services">
-				<h1>Nos services</h1></div>
-				
+				<h1>Nos services</h1>
+			</div>			
 
-			<div class="circle_1"></div><hr>
-				
-
-
+			<div class="circle_1"></div><hr>				
 			<div class="paragraphe_1"><p>Intégrer de nouvelles technologies, réaliser une maquette sur mesure, trouver les bonnes solutions pour les gérer<br> 
 			et obtenir des résultats concrets pour améliorer votre projet, c'est notre métier !</p></div>
-
 
 			<div class="conteneur_services">
 				<div id="main-feature">
 					<img id="image_1" src="images/main-feature.PNG" alt="Imac"/>    			    
-				</div>
-				
+				</div>				
 				
 				<div class="container_list_services">
-
-					<div>
-						
+					<div>						
 						<div class="petit_enfant_container">
 							<div class="circulaire_1 logo_1"><i class="fas fa-chart-line"></i></div>
 							<div class="circle_1"></div>
 						</div>
-
 						<h2>UX Design</h2> 
 						<div class="paragraphe_2"><p>On s’accorde pour dire que l’UX s’appuie aussi bien sur l’utilisabilité (la « facilité d’usage » d’une interface) que sur l’impact émotionnel ressenti. Ces deux aspects de l’expérience utilisateur sont indispensables et indissociables pour qualifier une expérience de « bonne UX ».</p>
-						</div>
-						
+						</div>						
 					</div>
 			
-					<div>
-						
+					<div>						
 						<div class="petit_enfant_container">
 							<div class="circulaire_1 logo_2"><i class="fas fa-cubes"></i></div>
 							<div class="circle_1"></div>
 						</div>
-
 						<h2>UI Design</h2>
 						<div class="paragraphe_2"><p>L’UI designer est responsable de la conception de l’interface qui lie l’utilisateur au produit. Il se charge de toutes les tâches relatives à la création de l’identité visuelle, parmi lesquelles le design du logo, ainsi que le choix des couleurs et de la typographie.</p>
-						</div>
-						
+						</div>						
 					</div>
 
-					<div>
-						
+					<div>						
 						<div class="petit_enfant_container">
 							<div class="circulaire_1 logo_3"><i class="fas fa-chart-pie"></i></div>
 							<div class="circle_1"></div> 
 						</div>
-
 						<h2>SEO</h2>
 						<div class="paragraphe_2"><p>SEO est l’acronyme de Search Engine Optimization et peut être défini comme l’art de positionner un site, une page web ou une application dans les premier. La démarche SEO doit être conduite en amont du lancement d’un site web.</p>
-						</div>
-						
+						</div>						
 					</div>
-
 				</div>
-
 			</div>
-
 		</section>
 
 <!-- FIN DE SERVICES -->
@@ -147,32 +124,25 @@
 <!-- PROJETS -->
 
 		<section class="projets">
-
+			<div id="page-2"></div>
 			<div class="Nos_projets">
-				<h1>Nos projets</h1></div>
-			
-
+				<h1>Nos projets</h1></div>	
 				<div class="circle_1"></div><hr>
-
 				<div class="paragraphe_1"><p> Grâce à notre savoir-faire, nous cultivons notre force de créativité ! Vous pouvez vous rendre sur les différentes rubriques ci-dessous<br>
 				pour regarder nos réalisations graphiques, celle-ci vous donnerons des idées pour votre futur site web. :)</p>
 				</div>
 
 			<div>
-
 				<ul id="nav_2">
 					<li class="bord_gauche"><a href="#"><div class="triangle"></div>All Works</a></li>	
 					<li><a href="#"><div class="triangle"></div>Creative</a></li>
 					<li><a href="#"><div class="triangle"></div>Corporate</a></li>
 					<li class="bord_droit"><a href="#"><div class="triangle"></div>Portfolio</a></li>
-				</ul>
-			
+				</ul>			
 			</div>
 
-
-			<div class="flex-container">
-	
-				<div><a href="#"><img class="image" src="images/01.JPG" alt="L'Homme aux lunettes en forme de hublot.">
+			<div class="flex-container">	
+				<div><a href="images/01.JPG"><img class="image" src="images/01.JPG" alt="L'Homme aux lunettes en forme de hublot.">
 					
 					<div class="petit_rectangle">
 						<h3>Porfolio : visuel 1</h3>
@@ -181,8 +151,7 @@
 					</div></a>
 				</div>
 
-				<div><a href="#"><img class="image" src="images/02.JPG" alt="Le lapin bigleux veut se marier.">
-
+				<div><a href="images/02.JPG"><img class="image" src="images/02.JPG" alt="Le lapin bigleux veut se marier.">
 				<div class="petit_rectangle">
 						<h3>Porfolio : visuel 2</h3>
 						<p>Le lapin bigleux veut se marier.</p>
@@ -190,62 +159,60 @@
 						</div></a>
 				</div>				
 				
-				<div><a href="#"><img class="image" src="images/03.JPG" alt="Notre superbe fabrique de logos.">
+				<div><a href="images/03.JPG"><img class="image" src="images/03.JPG" alt="Notre superbe fabrique de logos.">
 
 				<div class="petit_rectangle">
-						<h3>Porfolio : visuel 3</h3>
-						<p>Notre superbe fabrique de logos.</p>
-						<div class="circle_2"><div class="logo_4"><i class="far fa-eye"></i></div></div>
-						</div></a>
+					<h3>Porfolio : visuel 3</h3>
+					<p>Notre superbe fabrique de logos.</p>
+					<div class="circle_2"><div class="logo_4"><i class="far fa-eye"></i></div></div>
+					</div></a>
 				</div>
 
-				<div><a href="#"><img class="image" src="images/04.JPG" alt="Création de différents patrons sur papier.">
+				<div><a href="images/04.JPG"><img class="image" src="images/04.JPG" alt="Création de différents patrons sur papier.">
 
 				<div class="petit_rectangle">
-						<h3>Porfolio : visuel 4</h3>
-						<p>Création de différents patrons sur papier.</p>
-						<div class="circle_2"><div class="logo_4"><i class="far fa-eye"></i></div></div>
-						</div></a>
+					<h3>Porfolio : visuel 4</h3>
+					<p>Création de différents patrons sur papier.</p>
+					<div class="circle_2"><div class="logo_4"><i class="far fa-eye"></i></div></div>
+					</div></a>
 				</div>
 
-				<div><a href="#"><img class="image" src="images/05.JPG" alt="Faîte vos courses avec de jolis sacs.">
+				<div><a href="images/05.JPG"><img class="image" src="images/05.JPG" alt="Faîte vos courses avec de jolis sacs.">
 
 				<div class="petit_rectangle">
-						<h3>Porfolio : visuel 5</h3>
-						<p>Faîte vos courses avec de jolis sacs.</p>
-						<div class="circle_2"><div class="logo_4"><i class="far fa-eye"></i></div></div>
-						</div></a>
+					<h3>Porfolio : visuel 5</h3>
+					<p>Faîte vos courses avec de jolis sacs.</p>
+					<div class="circle_2"><div class="logo_4"><i class="far fa-eye"></i></div></div>
+					</div></a>
 				</div>
 
-				<div><a href="#"><img class="image" src="images/06.JPG" alt="Voyager pour découvrir de nouvelles cultures.">
+				<div><a href="images/06.JPG"><img class="image" src="images/06.JPG" alt="Voyager pour découvrir de nouvelles cultures.">
 
 				<div class="petit_rectangle">
-						<h3>Porfolio : visuel 6</h3>
-						<p>Voyager pour découvrir de nouvelles cultures.</p>
-						<div class="circle_2"><div class="logo_4"><i class="far fa-eye"></i></div></div>
-						</div></a>
+					<h3>Porfolio : visuel 6</h3>
+					<p>Voyager pour découvrir de nouvelles cultures.</p>
+					<div class="circle_2"><div class="logo_4"><i class="far fa-eye"></i></div></div>
+					</div></a>
 				</div>
 
-				<div><a href="#"><img class="image" src="images/07.JPG" alt="Le décollage de la fusée.">
+				<div><a href="images/07.JPG"><img class="image" src="images/07.JPG" alt="Le décollage de la fusée.">
 
 				<div class="petit_rectangle">
-						<h3>Porfolio : visuel 7</h3>
-						<p>Le décollage de la fusée.</p>
-						<div class="circle_2"><div class="logo_4"><i class="far fa-eye"></i></div></div>
-						</div></a>
+					<h3>Porfolio : visuel 7</h3>
+					<p>Le décollage de la fusée.</p>
+					<div class="circle_2"><div class="logo_4"><i class="far fa-eye"></i></div></div>
+					</div></a>
 				</div>
 
-				<div><a href="#"><img class="image" src="images/08.JPG" alt="Outils bureautique.">
+				<div><a href="images/08.JPG"><img class="image" src="images/08.JPG" alt="Outils bureautique.">
 
 				<div class="petit_rectangle">
-						<h3>Porfolio : visuel 8</h3>
-						<p>Outils bureautique.</p>
-						<div class="circle_2"><div class="logo_4"><i class="far fa-eye"></i></div></div>
-						</div></a>
-				</div>
-		
-			</div>
-		
+					<h3>Porfolio : visuel 8</h3>
+					<p>Outils bureautique.</p>
+					<div class="circle_2"><div class="logo_4"><i class="far fa-eye"></i></div></div>
+					</div></a>
+				</div>	
+			</div>		
 		</section>
 
 <!-- FIN DE PROJETS -->
@@ -253,8 +220,13 @@
 
 <!-- FORMULAIRE + CARTE -->
 
-		<footer>	
-
+		<footer>
+			<div id="page-3"></div>
+			<div class="contact">	
+				<h1>Contact</h1>
+			</div>
+			</div>
+			<div class="circle_1"></div><hr>
 			<div class="rectangle_formulaire">
 				<h2>Contact Info</h2>
 				<h4>WebAgency SAS</h4>
@@ -275,21 +247,22 @@
 					</p>
 							
 					<p>
-						<textarea name="Message" id="Message">Message</textarea>       
+						<textarea name="Message" id="Message" placeholder="Votre message"></textarea>       
 					</p>
 				
 					<div class="bouton_bleu">Envoyer message</div>
-
-				</form>
-									
+				</form>								
 			</div>	
 
-			<div id="carte_formulaire"></div><div><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10496.88643437743!2d2.3498257!3d48.8730518!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x30a290491097f07f!2sWebAgency+SAS!5e0!3m2!1sfr!2sfr!4v1544964217835"></iframe></div>			
+			<div id="carte_formulaire">
 
+			</div>
+			<div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10496.88643437743!2d2.3498257!3d48.8730518!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x30a290491097f07f!2sWebAgency+SAS!5e0!3m2!1sfr!2sfr!4v1544964217835"></iframe>
+			</div>			
 		</footer>
 
 <!-- FIN DE FORMULAIRE + CARTE -->
 
 	</body>	
-
 </html>

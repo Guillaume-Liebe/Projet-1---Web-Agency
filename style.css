@@ -39,6 +39,7 @@ body
 .ligne
 {
     border: 2px solid #2796bd;
+    background-color: #2796bd;
     width: 120%;
     margin-bottom: 55px;
 }
@@ -63,7 +64,7 @@ header
 {
     display: flex;
     justify-content: center;
-    position: fixed;
+    position: absolute;
     top: 0px;
     z-index: 10;
     background-color: white;
@@ -104,6 +105,11 @@ nav a
     height: 650px;
 }
 
+#image_principale h1 {
+    font-size: 175%;
+    margin-bottom: 20px;
+}
+
 .caption_1
 {
     position: absolute;
@@ -123,18 +129,21 @@ nav a
      color: #2796bd;
 }
 
-.bouton_bleu
+button
 {
     width: 170px;
-    height: 45px;
-    padding-top: 20px;
+    height: 60px;
     margin-top: 30px;
     font-size: 23px;
     text-align: center;
     font-weight: bold;
+    color: white;
     background-color: #5cadd3;
-    border-radius: 4px; 
-    box-shadow:0px 4px 0px #4494bb;
+    border-radius: 4px;
+    box-shadow: 0px 4px 0px #4494bb;
+    border: none;
+    cursor: pointer;
+    outline: none;
 }
 
 .bouton_1
@@ -188,9 +197,9 @@ nav a
 .ligne_3
 {
     position: absolute;
-    border: 2.5px solid rgba(0, 0, 0, 0.103);
+    border: 3.2px solid rgba(0, 0, 0, 0.103);
     margin-top: 645px;
-    width: 100%;
+    width: 99.7%;
 }
 
 /* Nos services : paragraphe + image mac + logos + textes*/
@@ -206,13 +215,16 @@ nav a
 .services h1
 {
     margin-bottom: 20px;
-    margin-top: 45px;
+    margin-top: 20px;
+    padding-top: 50px;
 }
 
+/*Titre de niveau I*/
  h1
-{
+{        
+    font-size: 85px;
     margin-bottom: 20px;
-    margin-top: 130px;
+    margin-top: 20px;
 }
 
 .circle_1
@@ -587,6 +599,20 @@ textarea
     color: white;
 }
 
+.contact 
+{
+    margin-bottom: 20px;
+    margin-top: 130px;
+    margin-bottom: 20px;
+    margin-top: 130px;
+    padding-top: 20px;
+    margin-top: 80px;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 
 /*Affichage en responsive*/
 
@@ -625,8 +651,8 @@ textarea
 
     #nav a 
     {    
-        font-size: 22px;
-        padding: 5px;
+        font-size: 23px;
+        padding: 25px;
     }
 
     .ligne 
@@ -637,6 +663,7 @@ textarea
     .bouton_1, .bouton_2
     {
         top: 570px;
+        display: none;
     }  
 
     .caption_1
@@ -646,7 +673,7 @@ textarea
 
     .caption_2
     {
-        font-size: 29px;
+        font-size: 40px;
     }
 
 
@@ -668,7 +695,7 @@ textarea
     
     .ligne_3
     {
-        border: 3.5px solid rgba(0, 0, 0, 0.103);
+        border: 3.2px solid rgba(0, 0, 0, 0.103);
         margin-top: 872px;
     }
 
@@ -704,18 +731,12 @@ textarea
         width: 300px;
         border-top: none;
         bottom: 36px;
-        border: 1px solid #d1d1d1;
-    }
-
-    .services h1
-    {
-        font-size: 85px;
-
+        border: 2px solid #d1d1d1;
     }
 
     .Nos_projets 
     {
-        font-size: 55px;
+        font-size: 45px;
 
     }
 
@@ -799,7 +820,6 @@ textarea
         margin-left: 8px;
     }
 
-
     .triangle
     {
         left: 73px;    
@@ -870,6 +890,11 @@ textarea
         margin-left: 45px;
         font-size: 21px;
     }
+
+    .contact 
+    {
+        font-size: 45px;
+    }
 }
 
 
@@ -883,7 +908,7 @@ textarea
 
     .container_header 
     {
-        width: 1440px;
+        width: 1000px;
     }
 
     #banniere_description 
@@ -949,26 +974,21 @@ textarea
     .ligne_2
     {
         border: 2.5px solid #2796bd;
+        background-color: #2796bd;
         margin-top: 645px;
         width: 14%;
     }
     
     .ligne_3
     {
-        border: 2.5px solid rgba(0, 0, 0, 0.103);
+        border: 3.2px solid rgba(0, 0, 0, 0.103);
         margin-top: 645px;
-        width: 100%;
-    }
-    
-    .services h1
-    {
-        font-size: 50px;
-
+        width: 99.7%;
     }
 
     .Nos_projets 
     {
-        font-size: 35px;
+        font-size: 45px;
 
     }
 
@@ -1016,6 +1036,7 @@ textarea
     {
         line-height: 30px;
         font-size: 15px;
+        margin-right: 50px;
     }
 
     .petit_enfant_container .circle_1 
@@ -1049,6 +1070,7 @@ textarea
 
     #nav_2
     {
+        display: none;
         margin-bottom: 80px;
         margin-left: -40px;
     }
@@ -1061,7 +1083,7 @@ textarea
         font-size: 16px;
         font-weight: bold;
         text-align: center;
-        padding: 16px 16px 14px 16px;
+        padding: 16px 36px 14px 36px;
         display: block;
         width: 80px;
     }
@@ -1158,10 +1180,35 @@ textarea
         margin-top: -25px;
         margin-left: 30px;
         font-size: 14px;
+        cursor: pointer;
+    }
+
+    .contact 
+    {
+        font-size: 45px;
     }
 
 }
 
+@media all and (max-width: 1920px)
+
+{
+    /*Ligne bandeau*/
+    .ligne_3
+    {
+        width: 99.7%;
+    }
+}
+
+@media all and (max-width: 1840px)
+
+{
+    /*Bandeau header*/
+    #image_principale h1 
+    {
+        margin-top: 80px;
+    }
+}
 
 @media all and (max-width: 1440px)
 {
@@ -1177,7 +1224,12 @@ textarea
 
     .container_header 
     {
-        width: 1140px;
+        width: 900px;
+    }
+
+    h1 
+    {
+        font-size: 65px;
     }
 
 }
@@ -1222,13 +1274,15 @@ textarea
     {
         position: absolute;
         text-align: center;
-        left: 90px;
+        left: 20px;
+        right: 20px;
         font-size: 34px;
         color: white;
     }
 
     .caption_2 {
         padding-left: 20px;
+        padding-right: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1333,42 +1387,72 @@ textarea
 
     iframe 
     {
-        height: 540px;
+        height: 800px;
     }
 
     #carte_formulaire 
     {
-        height: 545px;
+        height: 805px;
     }
 }
 
+@media all and (max-width: 940px)
 
-@media all and (max-width: 1024px)
 {
-    .container_header 
+    .container_header
     {
-        width: 680px;
+        flex-direction: column;
+    }
+
+    header 
+    {
+        height: 132px;
+        margin-top: 20px;
+    }
+
+    /*Logo*/
+    .container_header img 
+    {
+        margin-bottom: 40px;
+    }
+
+    .ligne 
+    {
+        margin-bottom: 15px;
+    } 
+    
+    #nav 
+    {
+        margin-top: -55px;
     }
 }
-
 
 @media all and (max-width: 768px)
+
 {
+    /*Bandeau header*/
+    #image_principale h1 
+    {
+        margin-top: 50px;
+    }
+
+    /*Titre de niveau I*/
     h1 
     {
         margin-bottom: 20px;
-        margin-top: 130px;
-        margin-left: -90px;
+        margin-top: 75px;
     }
 
+    /*Boutons*/
     .caption_2 
     {
-        margin-left: -90px;
+        padding-left: 0;
+        padding-right: 0;
     }
    
     .services h1 
     {
-        margin-left: 20px;
+        margin-left: 0px;
     } 
 
     .Nos_projets h1 
@@ -1380,25 +1464,21 @@ textarea
 @media all and (max-width: 635px)
 
 { 
-    .ligne 
+    #nav a 
     {
-        margin-bottom: 15px;
-    } 
+        padding: 5px;
+    }
 
+    /*Titre de niveau I*/
     h1
     {
-        margin-top: 0px;  
+        margin-top: 90px;  
     }
 
     #caption_1 #caption_2
     {
         flex-direction: column;
     }
-
-    .container_header
-    {
-        flex-direction: column;
-    }  
 
     .circulaire_1 
     {
@@ -1433,144 +1513,166 @@ textarea
     .paragraphe_2 
     {
         margin-left: 20px;
+        margin-right: 15px;
     }
-
 }
 
 @media all and (max-width: 595px)
 
 { 
-    #image_principale 
-    {
-        width: 756px;
-    }
-
-    h1 
-    {
-        margin-left: -70px;
-    } 
-
     #image_1 
     {
         margin-top: 50px;
-        width: 430px;
+        width: 100%;
     }
 
     .rectangle_formulaire 
     {
         right: 20px;
     }
-}
 
-
-@media all and (max-width: 425px)
-
-{ 
-    body 
+    .ligne_3 
     {
-        width: 178%;
-    }
-
-    .container_header img 
-    {
-        margin-top: 12px;
+        width: 98.7%;
     }
 
     h1 
     {
-        margin-left: 130px;
+        font-size: 45px;
+    }
+}
+
+@media all and (max-width: 500px)
+
+{ 
+    /*Bandeau header*/
+    #image_principale h1 
+    {
+        margin-top: 60px;
+        font-size: 150%;
+    }
+}
+
+@media all and (max-width: 425px)
+
+{ 
+    /*Menu*/
+    #nav 
+    {
+        margin-left: -60px;
     }
 
-    .bouton_2 
+    /*Bandeau header*/
+    #image_principale h1 
     {
-        right: -330px;
+        margin-top: 40px;
     }
 
-    .caption_2 
+    /*Titre de niveau I*/
+    h1
     {
-        padding-left: 220px;
+        margin-top: 30px;  
     }
 
-    .Nos_projets h1 
+    /*Ligne bandeau*/
+    .ligne_3 
     {
-        margin-left: 0px;
+        width: 98.5%;
     }
 
-    #carte_formulaire 
+    /*Image ordinateur*/
+    #image_1 
     {
-        width: 178%;
+        margin-top: 50px;
+        width: 100%;
     }
 
-    .rectangle_formulaire 
+    .image 
     {
-        right: -300px;
+        padding-left: 58px;
     }
 
-    textarea
+    .flex-container .petit_rectangle 
     {
-        font-family: 'Roboto-Regular', arial, sans-serif;
-        font-size: 13px;
-        color: #757575;
+        margin-left: 28px;
     }
 }
 
 @media all and (max-width: 375px)
 
 {  
-    body 
+    /*Menu*/
+    #nav 
     {
-        width: 202%;
-    } 
-
-    h1 
-    {
-        margin-left: 140px;
+        margin-left: -70px;
     }
 
-    .bouton_2 
+    /*Bandeau header*/
+    #image_principale h1 
     {
-        right: -381px;
+        margin-top: 40px;
+        font-size: 140%;
     }
 
-    #carte_formulaire 
+    .image 
     {
-        width: 202%;
+        width: 95%;
+        padding-top: 17px;
+        margin-left: -33.5px;
     }
 
-    .rectangle_formulaire 
+    .flex-container .petit_rectangle 
     {
-        right: -350px;
-    }   
-
+        margin-left: 25px;
+        padding-right: 5px;
+        padding-left: 0;
+    }
 }
 
 
 @media all and (max-width: 320px)
 
 {  
-    body 
+    /*Menu*/
+    #nav 
     {
-        width: 235%;
-    } 
+        margin-left: -40px;
+    }
 
+    nav li 
+    {
+        margin-left: 0px;
+    }
+
+    /*Bandeau header*/
+    #image_principale h1 
+    {
+        font-size: 110%;
+    }
+
+    /*Titre de niveau I*/
     h1 
     {
-        margin-left: 140px;
+        font-size: 1.2em;
     }
 
-    .bouton_2 
+    /*PORTFOLIO*/
+    .flex-container .petit_rectangle 
     {
-        right: -434px;
+        margin-left: 0px;
+        padding-right: 5px;
+        padding-left: 0;
     }
 
-    #carte_formulaire 
+    .flex-container a .petit_rectangle 
     {
-        width: 235%;
+        opacity: 0;
+        display: none;
     }
 
-    .rectangle_formulaire 
+    .image 
     {
-        right: -400px;
-    }   
-
+        width: 94%;
+        padding-top: 17px;
+    }
 }
